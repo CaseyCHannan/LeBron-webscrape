@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Bron-Soup</title>
+{% endblock %}
+
+{% block body %}
+
+{% for i in range(stats|length )%} 
+<div>
+    Lebron has amassed {{ stats[i][0] }} {{ stats[i][1] }}, he needs {{stats[i][2]}}
+    to surpass {{stats[i][3]}}'s total of {{stats[i][4]}} career {{stats[i][1]}}
+
+    
+</div>
+{% endfor %}
+{% endblock %}

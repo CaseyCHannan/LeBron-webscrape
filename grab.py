@@ -5,7 +5,7 @@ import inflect
 p = inflect.engine()
 
 
-def who_next(url, stat ):
+def who_next(url, stat_name):
     html = urlopen(url)
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -35,8 +35,8 @@ def who_next(url, stat ):
     
     bron_place = int(bron_inner.contents[0].rstrip('.')) 
     next_up_ord = p.ordinal(bron_place - 1) #zero-index
-    print(f'LeBron James has {bron_stat} career {stat}')
-    print(f"he needs {stat_diff} {stat}")
-    print(f'to surpass {next_up_name}\'s {next_up_stat} {stat} for {next_up_ord} place all time\n')
+    # print(f'LeBron James has {bron_stat} career {stat}')
+    # print(f"he needs {stat_diff} {stat}")
+    # print(f'to surpass {next_up_name}\'s {next_up_stat} {stat} for {next_up_ord} place all time\n')
 
-    return str(bron_stat)
+    return (bron_stat, stat_name, stat_diff, next_up_name, next_up_stat)

@@ -1,12 +1,12 @@
-from flask import Flask, escape, request
+from flask import Flask, escape, render_template, request, redirect
 from grab import who_next 
-from main import url_points 
-
+from main import stats
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    return render_template("index.html", stats=stats)
 
-    stat = who_next(url_points, 'points')
-    name = request.args.get("name", "World")
-    return f'Lebron has {escape(stat)} career points!'
+
+if __name__ == "__main__":
+    app.run(debug=True)
