@@ -5,12 +5,13 @@
 {% endblock %}
 
 {% block body %}
-
+<div class="h1 text-left">Lebron James... <br>
 {% for i in range(stats|length )%} 
-<div>
-    Lebron has amassed {{ stats[i][0] }} {{ stats[i][1] }}, he needs {{stats[i][2]}}
-    to surpass {{stats[i][3]}}'s total of {{stats[i][4]}} career {{stats[i][1]}}
-
+<div class="h2 text-center" >
+    has amassed {{ stats[i][0] }} career {{ stats[i][1] }}, he needs
+    {{stats[i][2]}} more {{stats[i][1]}} to surpass 
+    {{stats[i][3]}}'s total of {{stats[i][4]}}. <br>
+</div>
     
 </div>
 {% endfor %}
