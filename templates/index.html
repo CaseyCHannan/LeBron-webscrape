@@ -5,14 +5,31 @@
 {% endblock %}
 
 {% block body %}
-<div class="h1 text-left">Lebron James... <br>
+<div class="container h1 text-center">
+    <div class="row">
+        <div class="col">
+            <img src="digital_scoreboard" alt="triangle with equal sides" srcset="../static/digit_score.svg">
+        </div>
+        <div class="col-8 display-1">
+        Lebron James<br>
+        </div>
+        <div class="col">
+            <img src="digital_scoreboard" alt="triangle with equal sides" srcset="../static/digit_score.svg">  
+        </div>
 {% for i in range(stats|length )%} 
-<div class="h2 text-center" >
-    has amassed {{ stats[i][0] }} career {{ stats[i][1] }}, he needs
-    {{stats[i][2]}} more {{stats[i][1]}} to surpass 
-    {{stats[i][3]}}'s total of {{stats[i][4]}}. <br>
-</div>
-    
+<div class="h2 text-center stat-lines" >
+    <div class="row">
+        <div class="col-2">
+            <img src="ball" class="svg-icon" alt="triangle with equal sides" srcset="../static/{{icons[i*2]}}.svg">
+        </div>
+        <div class="col-8 {{teams[i]}}">
+            ... has amassed {{ stats[i][0] }} career {{ stats[i][1] }}, he needs
+            {{stats[i][2]}} more {{stats[i][1]}} to surpass 
+            {{stats[i][3]}}'s total of {{stats[i][4]}}.
+        </div>
+        <div class="col-2">   
+            <img src="ball_and_hoop" class="svg-icon" alt="triangle with equal sides" srcset="../static/{{icons[i*2+1]}}.svg">  
+        </div> 
 </div>
 {% endfor %}
 {% endblock %}

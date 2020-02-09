@@ -1,3 +1,50 @@
-.stat-lines {
-    margin: 1rem
+body, html {
+    color: white;
+    background-color: #0b563e;
+    
 }
+
+.svg-icon {
+    stroke: goldenrod;
+    color: goldenrod;
+    fill: currentColor;
+}
+
+/* .stat-lines {
+    margin: 1rem;
+    color: #552583;
+    background-color: yellow;
+} */
+
+.display-1  {
+    color: white;
+    font-weight: 500;
+}
+
+.footer {
+    margin-top: 5rem; 
+}
+
+
+.MIA {
+    color: #000000;
+    background-color: #98002e ;
+}
+.CLE {
+    color: #ffb81c ;
+    background-color:#6f263d ;
+}
+.LAL {
+    color: #552583;
+    background-color: #FDB927 ;
+}
+
+
+/* LAL colors #552583 and #fdb927  purple and yellow*/
+/* CLE colors  #6f263d and #ffb81c  wine and gold  */
+/* MIA colosr  #000000 and  #98002e  */
+/* tactic by Eucalyp from the Noun Project */
+/* hoop by Eucalyp from the Noun Project */
+/* digital scoreboard by ProSymbols from the Noun Project */
+
+
